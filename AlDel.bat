@@ -1,0 +1,603 @@
+@echo off
+cls
+title AlDel
+:: https://github.com/Gananath/AlDel
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo                     ###    ##       ########  ######## ##       
+echo                    ## ##   ##       ##     ## ##       ##       
+echo                   ##   ##  ##       ##     ## ##       ##       
+echo                  ##     ## ##       ##     ## ######   ##       
+echo                  ######### ##       ##     ## ##       ##       
+echo                  ##     ## ##       ##     ## ##       ##       
+echo                  ##     ## ######## ########  ######## ######## 
+echo.   
+echo.
+Echo                 A Small Portable app to delete malicious files
+echo                              Gananath R, 2013
+echo.
+echo.
+echo                     SEARCHING FOR REMOVABLE DRIVE (USB).....
+set /a a=1
+:colors
+
+::Ramdom number generator
+Set /a num=(%Random% %%9)+1
+
+::Random Letter generator A-F , this is a comment
+Setlocal EnableDelayedExpansion
+Set _RNDLength=1
+Set _Alphanumeric=ABCDEF123456789
+Set _Str=%_Alphanumeric%987654321
+:_LenLoop
+IF NOT "%_Str:~18%"=="" SET _Str=%_Str:~9%& SET /A _Len+=9& GOTO :_LenLoop
+SET _tmp=%_Str:~9,1%
+SET /A _Len=_Len+_tmp
+Set _count=0
+SET _RndAlphaNum=
+:_loop
+Set /a _count+=1
+SET _RND=%Random%
+Set /A _RND=_RND%%%_Len%
+SET _RndAlphaNum=!_RndAlphaNum!!_Alphanumeric:~%_RND%,1!
+If !_count! lss %_RNDLength% goto _loop
+
+color %num%!_RndAlphaNum!
+
+PING 127.0.0.1 -n 2 > NUL
+set /a b=%a%+1
+set /a a=%b%
+if %a%==4 goto PSTART
+goto colors
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+@ECHO OFF
+
+:PSTART
+cls
+date/t
+color 1e
+cd\
+title AlDel
+echo.
+echo.
+echo                        *******************************
+echo                        *          AlDel              *
+echo                        * (To delete malicious files) *
+echo                        *                             *
+echo                        * warning:for professionals   *    
+echo                        *         only                *
+echo                        *                         G007*
+echo                        *******************************
+echo.
+echo.
+echo                  WARNING: DELETE MALICIOUS FILES WITHOUT PROMPT
+echo                       (Delete file extension: scr,inf,lnk) 
+echo.
+echo.
+echo                            DETECTING REMOVABLE DRIVE...
+echo.
+for /F "tokens=1*" %%a in ('fsutil fsinfo drives') do (
+   for %%c in (%%b) do (
+      for /F "tokens=3" %%d in ('fsutil fsinfo drivetype %%c') do (
+         if %%d equ Removable (
+echo.
+Echo.
+echo                        REMOVABLE DRIVE %%c DETECTED (USB^)
+echo.  
+set /p   conf=DO YOU WANT TO CONTINUE, PRESS Y=
+if /I !conf! == y  (
+
+for %%a in ("%windir%") do (
+
+if /I %%c==%%~da (goto WARN))
+
+echo.
+ECHO                      PROCESS IN PROGRESS , PLEASE WAIT...
+echo.
+(
+Echo                        DELETED FILES FROM  %%%c  DRIVE -START UP SCAN
+echo.
+date/t
+time/t
+echo.  
+    dir/s /b /arsh %%c 
+
+
+echo.
+    IF EXIST %%c*.inf (
+    DIR /b %%c*.inf
+    del %%c*.inf
+   )
+echo.
+    IF EXIST %%c*.scr (
+    DIR /b %%c*.scr
+   del %%c*.scr
+)
+echo. 
+IF EXIST %%c*.lnk (
+    DIR /b %%c*.lnk
+    del %%c*.lnk
+)
+
+
+
+echo.
+echo.
+echo                       ***This is a AlDel Generated file***
+) >AldelStartScanFile.txt
+TYPE AldelStartScanFile.txt
+
+echo.
+
+del/s /q /arsh %%c*.*
+echo.
+echo                 UNHIDING FILES AND FOLDERS,IT MAY TAKE FEW MINUTES....
+echo                        skip this step by closing this window
+echo.
+attrib -h -r -s /s /d %%c*.* 
+ECHO                              PENDRIVE RESTORED
+echo.
+echo                               LOG FILE SAVED 
+echo.
+echo msgbox "TASK COMPLETED IN %%c DRIVE" > %tmp%\tmp.vbs
+wscript %tmp%\tmp.vbs
+del %tmp%\tmp.vbs
+
+
+            ) 
+
+         )
+      )
+
+   )
+
+)
+
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+@ECHO OFF
+:start
+cls
+date/t
+color 1e
+cd\
+title AlDel
+echo.
+echo.
+echo                        *******************************
+echo                        *          AlDel              *
+echo                        * (To delete malicious files) *
+echo                        *                             *
+echo                        * warning:for professionals   *    
+echo                        *         only                *
+echo                        *                         G007*
+echo                        *******************************
+echo.
+echo                               ษอออออออออออออป
+echo                               บ  Main Menu  บ
+echo                               ฬอออออออออออออน
+echo                               บ1.FIND       บ 
+echo                               บ2.DELETE     บ   
+echo                               บ3.TOOLS      บ
+echo                               บ4.PENDRIVE   บ
+echo                               บ5.EXIT       บ
+echo                               ศอออออออออออออผ  
+echo.
+set /p   a=Press the menu number :
+if %a%==1 goto FIND
+if %a%==2 goto DO
+if %a%==3 goto TOOLS
+if %a%==4 goto PEN
+if %a%==5 goto EOF
+if %a%==new goto CMA
+:CMA
+cmd
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+:FIND
+echo.
+:FINDFOR
+cls
+date/t
+echo.
+echo                        *******************************
+echo                        *          AlDel              *
+echo                        * (To delete malicious files) *
+echo                        *                             *
+echo                        * warning:for professionals   *    
+echo                        *         only                *
+echo                        *                         G007*
+echo                        *******************************
+echo.
+echo                               ษอออออออออออออป
+echo                               บ  Main Menu  บ
+echo                               ฬอออออออออออออนษอออออออออออออป
+echo                               บ1.FIND       บ 1.HIDDEN     บ
+echo                               บ*.******     บ 2.ALL        บ   
+echo                               บ*.*****      บ 3.BACK       บ
+echo                               บ*.********   บศอออออออออออออผ
+echo                               บ*.****       บ
+echo                               ศอออออออออออออผ
+echo.                                
+echo.
+set /p   y=Enter the Menu Number     :
+if %y%==1 goto HIDDEN
+if %y%==2 goto ALL
+if %y%==3 (goto start)
+:HIDDEN
+echo.
+set /p   m=Please enter the drive letter: 
+set /p   n=Enter the file and folder name with extension :
+dir/ashr %m%:\"%n%"
+set /p   h=Enter y to continue FIND :
+if /I %h%==y goto FINDFOR
+:ALL
+echo.
+set /p   m=Please enter the drive letter: 
+set /p   n=Enter the file and folder name with extension :
+attrib/s %m%:\"%n%"|more
+set /p   h=Enter y to continue FIND :
+if /I %h%==y goto FINDFOR
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+:PEN
+echo.
+:PENFOR
+cls
+date/t
+echo.
+echo                        *******************************
+echo                        *          AlDel              *
+echo                        * (To delete malicious files) *
+echo                        *                             *
+echo                        * warning:for professionals   *    
+echo                        *         only                *
+echo                        *                         G007*
+echo                        *******************************
+echo.
+echo                               ษอออออออออออออป
+echo                               บ  Main Menu  บ
+echo                               ฬอออออออออออออนษอออออออออออออป
+echo                               บ*.****       บ 1.BACK       บ
+echo                               บ*.******     บศอออออออออออออผ
+echo                               บ*.*****      บ
+echo                               บ4.PENDRIVE   บ
+echo                               บ*.****       บ
+echo                               ศอออออออออออออผ
+echo.                                
+echo.
+echo                  WARNING: DELETE MALICIOUS FILES WITHOUT PROMPT
+echo.
+::PENDRIVE LETTER FINDER
+@echo off
+for /F "tokens=1*" %%a in ('fsutil fsinfo drives') do (
+   for %%c in (%%b) do (
+      for /F "tokens=3" %%d in ('fsutil fsinfo drivetype %%c') do (
+         if %%d equ Removable (
+            echo Drive %%c is Removable (USB^)
+         )
+      )
+   )
+)
+echo.
+Set /p pp=ENTER THE DRIVE LETTER:
+
+for %%a in ("%windir%") do (
+
+if /I %pp%:==%%~da (goto WARN))
+
+echo.
+ECHO                        PROCESS IN PROGRESS , PLEASE WAIT...
+echo.
+
+(
+Echo                         DELETED FILES FROM  %pp%  DRIVE
+echo.
+date/t
+time/t
+echo.  
+    dir/s /b /arsh %pp%:\ 
+
+
+echo.
+    IF EXIST %pp%:\*.inf (
+    DIR /b %pp%:\*.inf
+    del %pp%:\*.inf
+   )
+echo.
+    IF EXIST %pp%:\*.scr (
+    DIR /b %pp%:\*.scr
+   del %pp%:\*.scr
+)
+echo. 
+IF EXIST %pp%:\*.lnk (
+    DIR /b %pp%:\*.lnk
+    del %pp%:\*.lnk
+)
+
+
+
+
+
+echo.
+echo.
+echo                       ***This is a AlDel Generated file***
+) >Aldel_file.txt
+TYPE Aldel_file.txt
+
+echo.
+
+del/s /q /arsh %pp%:*.*
+echo.
+echo                 UNHIDING FILES AND FOLDERS,IT MAY TAKE FEW MINUTES....
+echo                       skip this step by closing this window
+echo.
+attrib -h -r -s /s /d %pp%:\*.* 
+ECHO                              PENDRIVE RESTORED
+echo.
+echo                               LOG FILE SAVED 
+echo.
+echo msgbox "TASK COMPLETED IN %pp% DRIVE" > %tmp%\tmp.vbs
+wscript %tmp%\tmp.vbs
+del %tmp%\tmp.vbs
+set /p   yp=Enter the Menu Number:
+if %yp%==1 goto start
+
+echo.
+echo.
+:WARN
+echo.
+echo                   DEFAULT WINDOWS DRIVE LETTER, ACCESS DENIED
+echo.
+set /p   hp=Enter y to continue PENDRIVE :
+if /I %hp%==y (goto PENFOR) else (goto START)
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+:DO
+cls
+date/t
+
+cd\
+title AlDel
+echo.
+echo                        *******************************
+echo                        *          AlDel              *
+echo                        * (To delete malicious files) *
+echo                        *                             *
+echo                        * warning:for professionals   *    
+echo                        *         only                *
+echo                        *                         G007*
+echo                        *******************************
+echo.
+echo                               ษอออออออออออออป
+echo                               บ  Main Menu  บ
+echo                               ฬอออออออออออออน
+echo                               บ*.****       บษอออออออออออออป
+echo                               บ2.DELETE     บ 1.DELETE     บ
+echo                               บ*.*****      บ 2.BACK       บ
+echo                               บ*.********   บศอออออออออออออผ 
+echo                               บ*.****       บ
+echo                               ศอออออออออออออผ 
+ 
+echo.                                 
+echo.
+set /p   y=Enter the Menu Number     :
+if %y%==1 goto FOR
+if %y%==2 goto start
+:FOR
+echo.
+set /p   m1=Enter the name of drive :
+set /p   q=Do u want to enter another drive(y/n):
+if %q%==y goto sec
+if %q%==n goto DELE
+
+:sec
+echo.
+set /p   m2=Enter the name of drive :
+set /p   q=Do u want to enter another drive(y/n):
+if /I %q%==y goto thir
+if /I %q%==n goto DELE
+
+:thir
+echo.
+set /p   m3=Enter the name of drive :
+set /p   q=Do u want to enter another drive(y/n):
+if /I %q%==y goto four
+if /I %q%==n goto DELE
+
+:four
+echo.
+set /p   m4=Enter the name of drive :
+set /p   q=Do u want to enter another drive(y/n):
+if /I %q%==y goto fif
+if /I %q%==n goto DELE
+
+:fif
+echo.
+set /p   m5=Enter the name of drive :
+set /p   q=Do u want to enter another drive(y/n):
+if /I %q%==y goto six
+if /I %q%==n goto DELE
+
+echo.
+set /p   m6=Enter the name of drive :
+set /p   q=Do u want to enter another drive(y/n):
+if /I %q%==y goto sev
+if /I %q%==n goto DELE
+
+:sev
+echo.
+set /p   m7=Enter the name of drive :
+set /p   q=Do u want to enter another drive(y/n):
+if /I %q%==y goto eight
+if /I %q%==n goto DELE
+
+:eight
+echo.
+set /p   m8=Enter the name of drive :
+set /p   q=Do u want to enter another drive(y/n):
+if /I %q%==y goto nin
+if /I %q%==n goto DELE
+
+:nin
+echo.
+set /p   m9=Enter the name of drive :
+set /p   q=Do u want to enter another drive(y/n):
+if /I %q%==y goto ten
+if /I %q%==n goto DELE
+:ten
+echo.
+set /p   m10=Enter the name of drive :
+
+:DELE
+
+set /p   n=Enter the file and folder name to be deleted :
+
+attrib/s %m1%:\"%n%" -s -h -r
+set /p   z=Enter y to continue DELETE:
+if /I %z%==y del/s    %m1%:\"%n%"
+if /I %z%==y del/s    %m1%:\"%n%\*"
+
+attrib/s %m2%:\"%n%" -s -h -r
+set /p   z=Enter y to continue DELETE:
+if /I %z%==y del/s    %m2%:\"%n%"
+if /I %z%==y del/s    %m2%:\"%n%\*"
+
+attrib/s %m3%:\"%n%" -s -h -r
+set /p   z=Enter y to continue DELETE:
+if /I %z%==y del/s    %m3%:\"%n%"
+if /I %z%==y del/s    %m3%:\"%n%\*"
+
+attrib/s %m4%:\"%n%" -s -h -r
+set /p   z=Enter y to continue DELETE:
+if /I %z%==y del/s    %m4%:\"%n%"
+if /I %z%==y del/s    %m4%:\"%n%\*"
+
+attrib/s %m5%:\"%n%" -s -h -r
+set /p   z=Enter y to continue DELETE:
+if /I %z%==y del/s    %m5%:\"%n%"
+if /I %z%==y del/s    %m5%:\"%n%\*"
+
+attrib/s %m6%:\"%n%" -s -h -r
+set /p   z=Enter y to continue DELETE:
+if /I %z%==y del/s    %m6%:\"%n%"
+if /I %z%==y del/s    %m6%:\"%n%\*"
+
+attrib/s %m7%:\"%n%" -s -h -r
+set /p   z=Enter y to continue DELETE:
+if /I %z%==y del/s    %m7%:\"%n%"
+if /I %z%==y del/s    %m7%:\"%n%\*"
+
+attrib/s %m8%:\"%n%" -s -h -r
+set /p   z=Enter y to continue DELETE:
+if /I %z%==y del/s    %m8%:\"%n%"
+if /I %z%==y del/s    %m8%:\"%n%\*"
+
+attrib/s %m9%:\"%n%" -s -h -r
+set /p   z=Enter y to continue DELETE:
+if /I %z%==y del/s    %m9%:\"%n%"
+if /I %z%==y del/s    %m9%:\"%n%\*"
+
+attrib/s %m10%:\"%n%" -s -h -r
+set /p   z=Enter y to continue DELETE:
+if /I %z%==y del/s    %m10%:\"%n%"
+if /I %z%==y del/s    %m10%:\"%n%\*"
+
+
+echo.
+set/p    o=Do you want to enter another drive press y :
+if /I %o%==y goto FOR
+goto start
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+:TOOLS
+cls
+
+date/t
+cd\
+title AlDel
+echo.
+echo                        *******************************
+echo                        *          AlDel              *
+echo                        * (To delete malicious files) *
+echo                        *                             *
+echo                        * warning:for professionals   *    
+echo                        *         only                *
+echo                        *                         G007*
+echo                        *******************************
+echo.
+echo                               ษอออออออออออออป
+echo                               บ  Main Menu  บ
+echo                               ฬอออออออออออออน
+echo                               บ*.****       บ 
+echo                               บ*.******     บษอออออออออออออป   
+echo                               บ3.TOOLS      บ 1.REGISTRY   บ
+echo                               บ*.********   บ 2.HIDDEN     บ
+echo                               บ*.*****      บ 3.TASK MANGERบ 
+echo                               ศอออออออออออออผบ4.BACK       บ
+echo                                              ศอออออออออออออผ 
+echo.
+
+echo TOOLS will help to enable disabled tools in windows
+echo.
+
+set /p   k=Enter the Menu Number     :
+if %k%==1 goto REG
+if %k%==2 goto HID
+if %k%==3 goto TASK
+if %k%==4 goto start
+:REG
+ECHO REGEDIT4 > %WINDIR%\DXM2.REG
+echo. >> %WINDIR%\DXM2.reg
+
+echo [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer] >> %WINDIR%\DXM2.reg
+echo "DisableRegistryTools"=dword:0 >> %WINDIR%\DXM2.reg
+
+echo HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer] >> %WINDIR%\DXM2.reg
+echo "DisableRegistryTools"=dword:0 >> %WINDIR%\DXM2.reg
+
+start /w regedit /s %WINDIR%\DXM2.reg
+echo.
+echo                        COMPLETED
+pause>nul
+goto TOOLS
+:HID
+ECHO REGEDIT4 > %WINDIR%\DXM1.REG
+echo. >> %WINDIR%\DXM1.reg
+
+echo [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced\Folder\Hidden\SHOWALL] >> %WINDIR%\DXM1.reg
+echo "CheckedValue"=dword:1 >> %WINDIR%\DXM1.reg
+
+echo [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced\Folder\Hidden\SHOWALL] >> %WINDIR%\DXM1.reg
+echo "CheckedValue"=dword:1 >> %WINDIR%\DXM1.reg
+
+start /w regedit /s %WINDIR%\DXM1.reg
+echo.
+echo                        COMPLETED
+pause>nul
+goto TOOLS
+:TASK
+ECHO REGEDIT4 > %WINDIR%\DXM.REG
+echo. >> %WINDIR%\DXM.reg
+
+echo [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\System] >> %WINDIR%\DXM.reg
+echo "DisableTaskMgr"=dword:0 >> %WINDIR%\DXM.reg
+
+echo [HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Policies\System] >> %WINDIR%\DXM.reg
+echo "DisableTaskMgr"=dword:0 >> %WINDIR%\DXM.reg
+
+start /w regedit /s %WINDIR%\DXM.reg
+echo.
+echo                        COMPLETED
+pause>nul
+goto TOOLS
+///for further query plz send email to mail@deempost.com
