@@ -1,5 +1,5 @@
 # AlDel
-For deleting malicious files in windows
+For deleting malicious files from removable disks and pendrives in windows
 
 #What is it?
 This is a batch file I created more than seven years ago to delete malicious files from my windows XP/7 machine. I now have moved away from Windows to Linux and this was lying there in one of the folders.Its main purpose was to delete malicious files from XP machine, re-enable gadgets like *Reedit*,*CMD* and *Task Manager* which were disabled by those viruses or trogens and unhide *hidden* folders or files. 
