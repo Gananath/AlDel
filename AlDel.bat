@@ -1,7 +1,6 @@
 @echo off
 cls
 title AlDel
-:: https://github.com/Gananath/AlDel
 echo.
 echo.
 echo.
@@ -180,15 +179,15 @@ echo                        *         only                *
 echo                        *                         G007*
 echo                        *******************************
 echo.
-echo                               รรรรรรรรรรรรรรยป
-echo                               ยบ  Main Menu  ยบ
-echo                               รรรรรรรรรรรรรรยน
-echo                               ยบ1.FIND       ยบ 
-echo                               ยบ2.DELETE     ยบ   
-echo                               ยบ3.TOOLS      ยบ
-echo                               ยบ4.PENDRIVE   ยบ
-echo                               ยบ5.EXIT       ยบ
-echo                               รรรรรรรรรรรรรรยผ  
+echo                               ษอออออออออออออป
+echo                               บ  Main Menu  บ
+echo                               ฬอออออออออออออน
+echo                               บ1.FIND       บ 
+echo                               บ2.DELETE     บ   
+echo                               บ3.TOOLS      บ
+echo                               บ4.PENDRIVE   บ
+echo                               บ5.EXIT       บ
+echo                               ศอออออออออออออผ  
 echo.
 set /p   a=Press the menu number :
 if %a%==1 goto FIND
@@ -216,15 +215,15 @@ echo                        *         only                *
 echo                        *                         G007*
 echo                        *******************************
 echo.
-echo                               รรรรรรรรรรรรรรยป
-echo                               ยบ  Main Menu  ยบ
-echo                               รรรรรรรรรรรรรรยนรรรรรรรรรรรรรรยป
-echo                               ยบ1.FIND       ยบ 1.HIDDEN     ยบ
-echo                               ยบ*.******     ยบ 2.ALL        ยบ   
-echo                               ยบ*.*****      ยบ 3.BACK       ยบ
-echo                               ยบ*.********   ยบรรรรรรรรรรรรรรยผ
-echo                               ยบ*.****       ยบ
-echo                               รรรรรรรรรรรรรรยผ
+echo                               ษอออออออออออออป
+echo                               บ  Main Menu  บ
+echo                               ฬอออออออออออออนษอออออออออออออป
+echo                               บ1.FIND       บ 1.HIDDEN     บ
+echo                               บ*.******     บ 2.ALL        บ   
+echo                               บ*.*****      บ 3.BACK       บ
+echo                               บ*.********   บศอออออออออออออผ
+echo                               บ*.****       บ
+echo                               ศอออออออออออออผ
 echo.                                
 echo.
 set /p   y=Enter the Menu Number     :
@@ -263,15 +262,15 @@ echo                        *         only                *
 echo                        *                         G007*
 echo                        *******************************
 echo.
-echo                               รรรรรรรรรรรรรรยป
-echo                               ยบ  Main Menu  ยบ
-echo                               รรรรรรรรรรรรรรยนรรรรรรรรรรรรรรยป
-echo                               ยบ*.****       ยบ 1.BACK       ยบ
-echo                               ยบ*.******     ยบรรรรรรรรรรรรรรยผ
-echo                               ยบ*.*****      ยบ
-echo                               ยบ4.PENDRIVE   ยบ
-echo                               ยบ*.****       ยบ
-echo                               รรรรรรรรรรรรรรยผ
+echo                               ษอออออออออออออป
+echo                               บ  Main Menu  บ
+echo                               ฬอออออออออออออนษอออออออออออออป
+echo                               บ*.****       บ 1.BACK       บ
+echo                               บ*.******     บศอออออออออออออผ
+echo                               บ*.*****      บ
+echo                               บ4.PENDRIVE   บ
+echo                               บ*.****       บ
+echo                               ศอออออออออออออผ
 echo.                                
 echo.
 echo                  WARNING: DELETE MALICIOUS FILES WITHOUT PROMPT
@@ -377,15 +376,15 @@ echo                        *         only                *
 echo                        *                         G007*
 echo                        *******************************
 echo.
-echo                               รรรรรรรรรรรรรรยป
-echo                               ยบ  Main Menu  ยบ
-echo                               รรรรรรรรรรรรรรยน
-echo                               ยบ*.****       ยบรรรรรรรรรรรรรรยป
-echo                               ยบ2.DELETE     ยบ 1.DELETE     ยบ
-echo                               ยบ*.*****      ยบ 2.BACK       ยบ
-echo                               ยบ*.********   ยบรรรรรรรรรรรรรรยผ 
-echo                               ยบ*.****       ยบ
-echo                               รรรรรรรรรรรรรรยผ 
+echo                               ษอออออออออออออป
+echo                               บ  Main Menu  บ
+echo                               ฬอออออออออออออน
+echo                               บ*.****       บษอออออออออออออป
+echo                               บ2.DELETE     บ 1.DELETE     บ
+echo                               บ*.*****      บ 2.BACK       บ
+echo                               บ*.********   บศอออออออออออออผ 
+echo                               บ*.****       บ
+echo                               ศอออออออออออออผ 
  
 echo.                                 
 echo.
@@ -535,16 +534,16 @@ echo                        *         only                *
 echo                        *                         G007*
 echo                        *******************************
 echo.
-echo                               รรรรรรรรรรรรรรยป
-echo                               ยบ  Main Menu  ยบ
-echo                               รรรรรรรรรรรรรรยน
-echo                               ยบ*.****       ยบ 
-echo                               ยบ*.******     ยบรรรรรรรรรรรรรรยป   
-echo                               ยบ3.TOOLS      ยบ 1.REGISTRY   ยบ
-echo                               ยบ*.********   ยบ 2.HIDDEN     ยบ
-echo                               ยบ*.*****      ยบ 3.TASK MANGERยบ 
-echo                               รรรรรรรรรรรรรรยผยบ4.BACK       ยบ
-echo                                              รรรรรรรรรรรรรรยผ 
+echo                               ษอออออออออออออป
+echo                               บ  Main Menu  บ
+echo                               ฬอออออออออออออน
+echo                               บ*.****       บ 
+echo                               บ*.******     บษอออออออออออออป   
+echo                               บ3.TOOLS      บ 1.REGISTRY   บ
+echo                               บ*.********   บ 2.HIDDEN     บ
+echo                               บ*.*****      บ 3.TASK MANGERบ 
+echo                               ศอออออออออออออผบ4.BACK       บ
+echo                                              ศอออออออออออออผ 
 echo.
 
 echo TOOLS will help to enable disabled tools in windows
