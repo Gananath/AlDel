@@ -180,15 +180,15 @@ echo                        *         only                *
 echo                        *                         G007*
 echo                        *******************************
 echo.
-echo                               ÉÍÍÍÍÍÍÍÍÍÍÍÍÍ»
-echo                               º  Main Menu  º
-echo                               ÌÍÍÍÍÍÍÍÍÍÍÍÍÍ¹
-echo                               º1.FIND       º 
-echo                               º2.DELETE     º   
-echo                               º3.TOOLS      º
-echo                               º4.PENDRIVE   º
-echo                               º5.EXIT       º
-echo                               ÈÍÍÍÍÍÍÍÍÍÍÍÍÍ¼  
+echo                               Ã‰ÃÃÃÃÃÃÃÃÃÃÃÃÃÂ»
+echo                               Âº  Main Menu  Âº
+echo                               ÃŒÃÃÃÃÃÃÃÃÃÃÃÃÃÂ¹
+echo                               Âº1.FIND       Âº 
+echo                               Âº2.DELETE     Âº   
+echo                               Âº3.TOOLS      Âº
+echo                               Âº4.PENDRIVE   Âº
+echo                               Âº5.EXIT       Âº
+echo                               ÃˆÃÃÃÃÃÃÃÃÃÃÃÃÃÂ¼  
 echo.
 set /p   a=Press the menu number :
 if %a%==1 goto FIND
@@ -216,15 +216,15 @@ echo                        *         only                *
 echo                        *                         G007*
 echo                        *******************************
 echo.
-echo                               ÉÍÍÍÍÍÍÍÍÍÍÍÍÍ»
-echo                               º  Main Menu  º
-echo                               ÌÍÍÍÍÍÍÍÍÍÍÍÍÍ¹ÉÍÍÍÍÍÍÍÍÍÍÍÍÍ»
-echo                               º1.FIND       º 1.HIDDEN     º
-echo                               º*.******     º 2.ALL        º   
-echo                               º*.*****      º 3.BACK       º
-echo                               º*.********   ºÈÍÍÍÍÍÍÍÍÍÍÍÍÍ¼
-echo                               º*.****       º
-echo                               ÈÍÍÍÍÍÍÍÍÍÍÍÍÍ¼
+echo                               Ã‰ÃÃÃÃÃÃÃÃÃÃÃÃÃÂ»
+echo                               Âº  Main Menu  Âº
+echo                               ÃŒÃÃÃÃÃÃÃÃÃÃÃÃÃÂ¹Ã‰ÃÃÃÃÃÃÃÃÃÃÃÃÃÂ»
+echo                               Âº1.FIND       Âº 1.HIDDEN     Âº
+echo                               Âº*.******     Âº 2.ALL        Âº   
+echo                               Âº*.*****      Âº 3.BACK       Âº
+echo                               Âº*.********   ÂºÃˆÃÃÃÃÃÃÃÃÃÃÃÃÃÂ¼
+echo                               Âº*.****       Âº
+echo                               ÃˆÃÃÃÃÃÃÃÃÃÃÃÃÃÂ¼
 echo.                                
 echo.
 set /p   y=Enter the Menu Number     :
@@ -263,15 +263,15 @@ echo                        *         only                *
 echo                        *                         G007*
 echo                        *******************************
 echo.
-echo                               ÉÍÍÍÍÍÍÍÍÍÍÍÍÍ»
-echo                               º  Main Menu  º
-echo                               ÌÍÍÍÍÍÍÍÍÍÍÍÍÍ¹ÉÍÍÍÍÍÍÍÍÍÍÍÍÍ»
-echo                               º*.****       º 1.BACK       º
-echo                               º*.******     ºÈÍÍÍÍÍÍÍÍÍÍÍÍÍ¼
-echo                               º*.*****      º
-echo                               º4.PENDRIVE   º
-echo                               º*.****       º
-echo                               ÈÍÍÍÍÍÍÍÍÍÍÍÍÍ¼
+echo                               Ã‰ÃÃÃÃÃÃÃÃÃÃÃÃÃÂ»
+echo                               Âº  Main Menu  Âº
+echo                               ÃŒÃÃÃÃÃÃÃÃÃÃÃÃÃÂ¹Ã‰ÃÃÃÃÃÃÃÃÃÃÃÃÃÂ»
+echo                               Âº*.****       Âº 1.BACK       Âº
+echo                               Âº*.******     ÂºÃˆÃÃÃÃÃÃÃÃÃÃÃÃÃÂ¼
+echo                               Âº*.*****      Âº
+echo                               Âº4.PENDRIVE   Âº
+echo                               Âº*.****       Âº
+echo                               ÃˆÃÃÃÃÃÃÃÃÃÃÃÃÃÂ¼
 echo.                                
 echo.
 echo                  WARNING: DELETE MALICIOUS FILES WITHOUT PROMPT
@@ -377,15 +377,15 @@ echo                        *         only                *
 echo                        *                         G007*
 echo                        *******************************
 echo.
-echo                               ÉÍÍÍÍÍÍÍÍÍÍÍÍÍ»
-echo                               º  Main Menu  º
-echo                               ÌÍÍÍÍÍÍÍÍÍÍÍÍÍ¹
-echo                               º*.****       ºÉÍÍÍÍÍÍÍÍÍÍÍÍÍ»
-echo                               º2.DELETE     º 1.DELETE     º
-echo                               º*.*****      º 2.BACK       º
-echo                               º*.********   ºÈÍÍÍÍÍÍÍÍÍÍÍÍÍ¼ 
-echo                               º*.****       º
-echo                               ÈÍÍÍÍÍÍÍÍÍÍÍÍÍ¼ 
+echo                               Ã‰ÃÃÃÃÃÃÃÃÃÃÃÃÃÂ»
+echo                               Âº  Main Menu  Âº
+echo                               ÃŒÃÃÃÃÃÃÃÃÃÃÃÃÃÂ¹
+echo                               Âº*.****       ÂºÃ‰ÃÃÃÃÃÃÃÃÃÃÃÃÃÂ»
+echo                               Âº2.DELETE     Âº 1.DELETE     Âº
+echo                               Âº*.*****      Âº 2.BACK       Âº
+echo                               Âº*.********   ÂºÃˆÃÃÃÃÃÃÃÃÃÃÃÃÃÂ¼ 
+echo                               Âº*.****       Âº
+echo                               ÃˆÃÃÃÃÃÃÃÃÃÃÃÃÃÂ¼ 
  
 echo.                                 
 echo.
@@ -535,16 +535,16 @@ echo                        *         only                *
 echo                        *                         G007*
 echo                        *******************************
 echo.
-echo                               ÉÍÍÍÍÍÍÍÍÍÍÍÍÍ»
-echo                               º  Main Menu  º
-echo                               ÌÍÍÍÍÍÍÍÍÍÍÍÍÍ¹
-echo                               º*.****       º 
-echo                               º*.******     ºÉÍÍÍÍÍÍÍÍÍÍÍÍÍ»   
-echo                               º3.TOOLS      º 1.REGISTRY   º
-echo                               º*.********   º 2.HIDDEN     º
-echo                               º*.*****      º 3.TASK MANGERº 
-echo                               ÈÍÍÍÍÍÍÍÍÍÍÍÍÍ¼º4.BACK       º
-echo                                              ÈÍÍÍÍÍÍÍÍÍÍÍÍÍ¼ 
+echo                               Ã‰ÃÃÃÃÃÃÃÃÃÃÃÃÃÂ»
+echo                               Âº  Main Menu  Âº
+echo                               ÃŒÃÃÃÃÃÃÃÃÃÃÃÃÃÂ¹
+echo                               Âº*.****       Âº 
+echo                               Âº*.******     ÂºÃ‰ÃÃÃÃÃÃÃÃÃÃÃÃÃÂ»   
+echo                               Âº3.TOOLS      Âº 1.REGISTRY   Âº
+echo                               Âº*.********   Âº 2.HIDDEN     Âº
+echo                               Âº*.*****      Âº 3.TASK MANGERÂº 
+echo                               ÃˆÃÃÃÃÃÃÃÃÃÃÃÃÃÂ¼Âº4.BACK       Âº
+echo                                              ÃˆÃÃÃÃÃÃÃÃÃÃÃÃÃÂ¼ 
 echo.
 
 echo TOOLS will help to enable disabled tools in windows
@@ -600,4 +600,4 @@ echo.
 echo                        COMPLETED
 pause>nul
 goto TOOLS
-///for further query plz send email to mail@deempost.com
+///for further query plz  https://github.com/Gananath/AlDel
