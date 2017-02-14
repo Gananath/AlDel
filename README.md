@@ -11,5 +11,6 @@ This is a batch file I created more than seven years ago to delete malicious fil
 - I used this for **my** personal use and not sure whether it will work for others.
 - **Strictly** made for programmers who have a basic understanding of programming
 - Not sure about its compactibility with later windows OS.
+- I have hard coded to prevent users entering windows system drive letter but still advice to exercise a little caution
 
 
