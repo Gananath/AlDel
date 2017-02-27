@@ -2,8 +2,7 @@
 For deleting malicious files from removable disks and pendrives in windows
 
 #IMPORTANT
-Due to some compactibility issue with git I have added zipped file of the batch file. Please download the zipped file and extract the batch file from it.
-
+Due to some compactibility issue with git I have to rename the batch file. You can either use **Aldel.bat.txt** or **Aldel.bat.zip** file and rename and remove the last **.txt** or **.zip**
 #What is it?
 This is a batch file I created more than seven years ago to delete malicious files from my windows XP/7 machine. I now have moved away from Windows to Linux and this was lieing there in one of the folders.Its main purpose was to delete malicious files from XP machine, re-enable gadgets like *Regedit*,*CMD* and *Task Manager* which were disabled by those viruses or trogens and unhide *hidden* folders or files. 
 
