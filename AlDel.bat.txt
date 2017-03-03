@@ -599,4 +599,4 @@ echo.
 echo                        COMPLETED
 pause>nul
 goto TOOLS
-///for further query plz send email to mail@deempost.com
+///for further query plz send email to https://gananath.github.io
